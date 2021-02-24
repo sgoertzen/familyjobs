@@ -17,14 +17,12 @@ type ChoreDay = {
 
 export const ChoreList = (props:ChoreListProps) => {
   
-  let currentDayOfWeek = new Date().getDay();
-
-
-
+  let currentDayOfWeek:number = new Date().getDay();
+  
   return (
     <>
       <div className="stock-container">Welcome to Family Jobs.  Today is {new Date().toLocaleString()}</div>
-        {props.days.filter(cd => cd.dayOfWeek == currentDayOfWeek).map((choreday) => (
+        {props.days.filter(cd => cd.dayOfWeek === currentDayOfWeek).map((choreday) => (
             <>
             <ChoreItem name="Load Dishes" assignee={choreday.dishesLoad} />
             <ChoreItem name="Unload Dishes" assignee={choreday.dishesUnload} />
