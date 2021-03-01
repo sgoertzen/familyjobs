@@ -2,30 +2,14 @@
   "name": "familyjobs",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.7.3",
-    "@types/jest": "^26.0.20",
-    "@types/node": "^12.20.4",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "husky": "^5.1.1",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.5",
-    "web-vitals": "^1.1.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "update-dependencies": "ncu -u"
   },
   "eslintConfig": {
     "extends": [
@@ -55,12 +39,30 @@
       "prettier --write"
     ]
   },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.0",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.31",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "husky": "^5.1.1",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.2.2",
+    "web-vitals": "^1.1.0"
+  },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.1.19",
-    "@storybook/addon-essentials": "^6.1.19",
-    "@storybook/addon-links": "^6.1.19",
-    "@storybook/node-logger": "^6.1.19",
+    "@storybook/addon-actions": "^6.1.20",
+    "@storybook/addon-essentials": "^6.1.20",
+    "@storybook/addon-links": "^6.1.20",
+    "@storybook/node-logger": "^6.1.20",
     "@storybook/preset-create-react-app": "^3.1.6",
-    "@storybook/react": "^6.1.19"
+    "@storybook/react": "^6.1.20",
+    "npm-check-updates": "^11.1.9"
   }
 }
