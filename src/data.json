@@ -1,12 +1,30 @@
 {
+    "weeks":[
+        {
+            "week":0,
+            "sortLaundry":"Dad"
+        },
+        {
+            "week":1,
+            "sortLaundry":"Kyla"
+        },
+        {
+            "week":2,
+            "sortLaundry":"Mom"
+        },
+        {
+            "week":3,
+            "sortLaundry":"Bryce"
+        },
+    ]
     "days":[
         {
             "dayOfWeek": 0,
             "name": "Sunday",
             "dishesUnload": "Kyla",
             "dishesLoad": "Dad",
-            "walkMorning": "Bryce",
-            "walkEvening": "Kyla"
+            "walkMorning": "Kyla",
+            "walkEvening": "Bryce"
         },
         {
             "dayOfWeek": 1,
@@ -29,16 +47,16 @@
             "name": "Wednesday",
             "dishesUnload": "Kyla",
             "dishesLoad": "Mom",
-            "walkMorning": "Bryce",
-            "walkEvening": "Kyla"
+            "walkMorning": "Kyla",
+            "walkEvening": "Bryce"
         },
         {
             "dayOfWeek": 4,
             "name": "Thursday",
             "dishesUnload": "Dad",
             "dishesLoad": "Bryce",
-            "walkMorning": "Bryce",
-            "walkEvening": "Kyla"
+            "walkMorning": "Kyla",
+            "walkEvening": "Bryce"
         },
         {
             "dayOfWeek": 5,
