@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Family Jobs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Family Jobs is a website used by my family to track chores.  It is designed to 
+
+
 
 ## Available Scripts
 
