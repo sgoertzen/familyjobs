@@ -41,7 +41,6 @@
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.0",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.31",
@@ -63,6 +62,7 @@
     "@storybook/node-logger": "^6.1.20",
     "@storybook/preset-create-react-app": "^3.1.6",
     "@storybook/react": "^6.1.20",
+    "@testing-library/react": "^11.2.6",
     "npm-check-updates": "^11.5.9"
   }
 }
