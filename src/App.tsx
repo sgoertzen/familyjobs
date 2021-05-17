@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { ChoreList } from './ChoreList';
-import { Disclaimer } from './Disclaimer';
+import { ChoreList } from './components/ChoreList';
+import { Disclaimer } from './components/Disclaimer';
 
 // Note, either one of these work.  Don't understand the difference yet.
 //import * as data from "./data.json";

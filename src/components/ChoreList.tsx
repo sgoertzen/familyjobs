@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import { DailyChoreItem } from "./DailyChoreItem";
 
 type ChoreListProps = {

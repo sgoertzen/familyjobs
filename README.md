@@ -1,6 +1,6 @@
 # Family Jobs
 
-Family Jobs is a website used by my family to track chores.  It is designed to 
+Family Jobs is a website used by my family to track chores.  
 
 
 
