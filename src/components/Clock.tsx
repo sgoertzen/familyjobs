@@ -1,4 +1,8 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from '@emotion/react'
 import React, { useEffect, useState } from 'react';
+import { border, extraLargeText } from '../styles/style'
 
 export const formatTime = (time:Date) => {
     let hours = time.getHours();
@@ -33,5 +37,7 @@ export const Clock = () => {
         }
       }, [loop]);
 
-    return (<h1>{formatTime(time)}</h1>);
+    return (<div css={[border, extraLargeText]}>
+        {formatTime(time)}
+      </div>)
 }
