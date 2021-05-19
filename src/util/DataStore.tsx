@@ -1,5 +1,5 @@
+import { getWeek } from 'date-fns';
 import data from '../data.json';
-import { weekOfYear } from './WeekUtil'
 
 export type AssignedChores = {
   choreName:string,
@@ -28,7 +28,7 @@ export const getChoreList = (lookupDay:Date):ChoreDay => {
       return cd
     })
 
-    let weekModulus = weekOfYear(lookupDay) % 4
+    let weekModulus = getWeek(lookupDay) % 4
     data.weeks.filter(wd => wd.week === weekModulus).filter(wd => wd.daysOfWeek.includes(lookupDayOfWeek)).map((wd) => {
       choreDay.chores.push({choreName: "Sort Laundry", personName: wd.sortLaundry})
       return wd

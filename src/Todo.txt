@@ -1,1 +1,2 @@
 Update data.json to use frequency, length, etc.
+Change display somehow when not on today (to make it obvious)

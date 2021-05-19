@@ -60,23 +60,23 @@
     "weeks":[
         {
             "week":0,
-            "daysOfWeek":[5,6],
-            "sortLaundry":"Kyla"
+            "daysOfWeek":[6],
+            "sortLaundry":"Dad"
         },
         {
             "week":1,
-            "daysOfWeek":[5,6],
-            "sortLaundry":"Mom"
+            "daysOfWeek":[6],
+            "sortLaundry":"Kyla"
         },
         {
             "week":2,
-            "daysOfWeek":[5,6],
-            "sortLaundry":"Bryce"
+            "daysOfWeek":[6],
+            "sortLaundry":"Mom"
         },
         {
             "week":3,
-            "daysOfWeek":[5,6],
-            "sortLaundry":"Dad"
+            "daysOfWeek":[6],
+            "sortLaundry":"Bryce"
         }
     ]
 }
