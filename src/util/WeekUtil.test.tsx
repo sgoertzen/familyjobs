@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {weekOfYear} from './ChoreList'
+import {weekOfYear} from './WeekUtil'
 
 describe('Week computation', () => {
     it ('First week of year', () => {
