@@ -1,12 +1,30 @@
-import { useState } from "react"
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, css } from '@emotion/react'
+import React, { useState } from "react"
 import { DailyChoreItem } from "./DailyChoreItem"
 import { ChoreDay, getChoreList} from "../util/DataStore"
 import { DayDisplay } from "./DayDisplay"
 import { add } from 'date-fns'
+import { border, iconButton, largeText } from '../styles/style'
+import { ChevronButton, ChevronDirection } from './ChevronButton'
 
 type ChoreListProps = {
   displayDay: Date
 }
+
+const rowFlex = css({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between'
+})
+
+const colFlex = css({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-evenly'
+})
+
 
 export const ChoreList = (props:ChoreListProps) => {
 
@@ -29,18 +47,18 @@ export const ChoreList = (props:ChoreListProps) => {
       d1.getDate() === d2.getDate()
   }
   
-  let returnButton = (sameDay(choreDay.date, new Date())) ? <></> : <button onClick={toToday}>Back To Today</button>;
+  let returnButton = (sameDay(choreDay.date, new Date())) ? <span></span> : <button css={[iconButton, largeText]} onClick={toToday}>Back To Today</button>;
   return (
-    <>
-    {/* Todo: Add in left/right chevron - https://fontawesome.com/icons/chevron-left?style=solid */}
-      <button onClick={decrement}>Previous Day</button>
-      {returnButton}
-      
-      {choreDay.chores.map((cd) => 
-        <DailyChoreItem key={cd.choreName} name={cd.choreName} assignee={cd.personName}/>
-      )}
-      <DayDisplay day={choreDay.date}/>
-      <button onClick={increment}>Next Day</button>
-    </>
+    <div css={[border, rowFlex]}>
+      <ChevronButton onClick={decrement} direction={ChevronDirection.Left}/>
+      <div css={colFlex}>
+        {returnButton}
+        {choreDay.chores.map((cd) => 
+          <DailyChoreItem key={cd.choreName} name={cd.choreName} assignee={cd.personName}/>
+        )}
+        <DayDisplay day={choreDay.date}/>
+      </div>
+      <ChevronButton onClick={increment} direction={ChevronDirection.Right}/>
+    </div>
   );
 };
