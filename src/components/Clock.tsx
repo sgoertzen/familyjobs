@@ -1,6 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from '@emotion/react'
+import { jsx, css } from '@emotion/react'
 import React, { useEffect, useState } from 'react';
 import { border, extraLargeText } from '../styles/style'
 
@@ -23,21 +23,19 @@ export const Clock = () => {
     const [loop, setLoop] = useState<NodeJS.Timeout>();
     
     useEffect(() => {
-        console.debug('Setting up loop interval')
         setLoop( setInterval(() => { setTime(new Date()) }, 1000) )
     }, [])
 
     useEffect(() => {
         // componentWillUnmount
         return () => {
-            console.debug('Clearing the loop interval')
             if (loop !== undefined) {
                 clearInterval(loop);
             }
         }
       }, [loop]);
 
-    return (<div css={[border, extraLargeText]}>
+    return (<div css={[border, extraLargeText, css({textAlign:'center'})]}>
         {formatTime(time)}
       </div>)
 }

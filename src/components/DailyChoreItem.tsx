@@ -11,11 +11,23 @@ type ChoreProps = {
 }
 
 const choreSpacing = css({
-    margin: '15px'
+    margin: '10px'
+})
+
+const choreNameStyle = css({
+    fontWeight: 'lighter'
+})
+
+const assigneeStyle = css({
+    fontWeight: 'bold',
+    marginLeft: '.5em'
 })
 
 export const DailyChoreItem = ({name, assignee}: ChoreProps) => {
     return (
-        <div css={[choreSpacing, largeText]}>{ name }: { assignee }</div>
+            <div css={[choreSpacing, largeText]}>
+                <span css={choreNameStyle}>{ name }</span>:
+                <span css={assigneeStyle}>{ assignee }</span>
+            </div>
         )
 };

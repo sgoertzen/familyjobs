@@ -9,5 +9,5 @@ type DayDisplayProps = {
 }
 
 export const DayDisplay = (props:DayDisplayProps) => {
-    return <div css={largeText}>{format(props.day, "eeee MMM do 'chores'")}</div>
+    return <div css={largeText}>{format(props.day, "eeee MMM do 'Chores'")}</div>
 }

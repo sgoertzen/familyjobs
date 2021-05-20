@@ -6,7 +6,8 @@ export const LeftChevron = ({
     ...props
   }: React.SVGProps<SVGSVGElement>) =>  (
     <svg width={width} height={height} viewBox="0 0 7 12" xmlns="http://www.w3.org/2000/svg" {...props}>
-        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <title>Left Chevron</title>
+        <g id="Icons" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="Rounded" transform="translate(-142.000000, -3438.000000)">
                 <g id="Navigation" transform="translate(100.000000, 3378.000000)">
                     <g id="-Round-/-Navigation-/-chevron_left" transform="translate(34.000000, 54.000000)">
@@ -28,9 +29,8 @@ export const RightChevron = ({
     ...props
   }: React.SVGProps<SVGSVGElement>) =>  (
     <svg width={width} height={height} viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <title>chevron_right</title>
-        <desc>Created with Sketch.</desc>
-        <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <title>Right Chevron</title>
+        <g id="Icons" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
             <g id="Rounded" transform="translate(-619.000000, -3438.000000)">
                 <g id="Navigation" transform="translate(100.000000, 3378.000000)">
                     <g id="-Round-/-Navigation-/-chevron_right" transform="translate(510.000000, 54.000000)">

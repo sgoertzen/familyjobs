@@ -21,7 +21,10 @@ export const ChevronButton = (props: ChevronButtonProps) => {
 
 
     return (
-        <button css={iconButton} onClick={props.onClick}>
+        <button 
+            css={iconButton} 
+            onClick={props.onClick} 
+            title={props.direction === ChevronDirection.Left?'leftchevron':'rightchevron'}>
             {chevButton}
         </button>
     )
