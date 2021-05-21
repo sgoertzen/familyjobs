@@ -6,7 +6,7 @@ import { DailyChoreItem } from "./DailyChoreItem"
 import { ChoreDay, getChoreList} from "../util/DataStore"
 import { DayDisplay } from "./DayDisplay"
 import { add } from 'date-fns'
-import { border, iconButton, largeText } from '../styles/style'
+import { accentText, border, smallButton, smallText } from '../styles/style'
 import { ChevronButton, ChevronDirection } from './ChevronButton'
 
 type ChoreListProps = {
@@ -47,16 +47,16 @@ export const ChoreList = (props:ChoreListProps) => {
       d1.getDate() === d2.getDate()
   }
   
-  let returnButton = (sameDay(choreDay.date, new Date())) ? <span></span> : <button css={[iconButton, largeText]} onClick={toToday}>Back To Today</button>;
+  let returnButton = (sameDay(choreDay.date, new Date())) ? null : <button css={[smallButton, smallText, accentText]} onClick={toToday}>Back To Today</button>;
   return (
     <div css={[border, rowFlex]}>
       <ChevronButton onClick={decrement} direction={ChevronDirection.Left}/>
       <div css={colFlex}>
-        {returnButton}
+        <DayDisplay day={choreDay.date}/>
         {choreDay.chores.map((cd) => 
           <DailyChoreItem key={cd.choreName} name={cd.choreName} assignee={cd.personName}/>
         )}
-        <DayDisplay day={choreDay.date}/>
+        {returnButton}
       </div>
       <ChevronButton onClick={increment} direction={ChevronDirection.Right}/>
     </div>

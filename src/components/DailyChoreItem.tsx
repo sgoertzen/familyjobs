@@ -15,7 +15,7 @@ const choreSpacing = css({
 })
 
 const choreNameStyle = css({
-    fontWeight: 'lighter'
+    fontWeight: 'normal'
 })
 
 const assigneeStyle = css({

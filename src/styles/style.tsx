@@ -19,13 +19,28 @@ export const text = css({
     color: COLOR_MAIN
 })
 
+export const accentText = css({
+    color: 'white'
+})
+
+export const smallText = [text, css({
+    fontSize: '16px'
+})]
+
 export const largeText = [text, css({
-    fontSize: '40px'
+    fontSize: '36px'
 })]
 export const extraLargeText = [text, css({
     fontSize: '80px'
 })]
 
+export const smallButton = css({
+    border: '4px solid ' + COLOR_HIGHLIGHT,
+    borderRadius: '7px',
+    backgroundColor: COLOR_ACCENT,
+    color: 'white',
+    padding: '5px'
+})
 
 export const iconButton = css({
     border: '4px solid ' + COLOR_HIGHLIGHT,
