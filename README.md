@@ -1,5 +1,7 @@
 # Family Jobs
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f1dfe4fa-6c6e-4af0-914d-bf4796271ae7/deploy-status)](https://app.netlify.com/sites/modest-clarke-4c57e5/deploys)
+
 Family Jobs is a website used by my family to track chores.  
 
 

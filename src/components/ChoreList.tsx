@@ -6,8 +6,9 @@ import { DailyChoreItem } from "./DailyChoreItem"
 import { ChoreDay, getChoreList} from "../util/DataStore"
 import { DayDisplay } from "./DayDisplay"
 import { add } from 'date-fns'
-import { accentText, border, smallButton, smallText } from '../styles/style'
 import { ChevronButton, ChevronDirection } from './ChevronButton'
+import { border } from '../styles/style'
+import { TimedButton } from './TimedButton'
 
 type ChoreListProps = {
   displayDay: Date
@@ -47,7 +48,7 @@ export const ChoreList = (props:ChoreListProps) => {
       d1.getDate() === d2.getDate()
   }
   
-  let returnButton = (sameDay(choreDay.date, new Date())) ? null : <button css={[smallButton, smallText, accentText]} onClick={toToday}>Back To Today</button>;
+  let returnButton = (sameDay(choreDay.date, new Date())) ? null : <TimedButton onClick={toToday} timeoutMilliseconds={30000} />;
   return (
     <div css={[border, rowFlex]}>
       <ChevronButton onClick={decrement} direction={ChevronDirection.Left}/>

@@ -20,20 +20,20 @@ export const formatTime = (time:Date) => {
 
 export const Clock = () => {
     const [time, setTime] = useState<Date>(new Date());
-    const [loop, setLoop] = useState<NodeJS.Timeout>();
+    const [timeout, setTimeout] = useState<NodeJS.Timeout>();
     
     useEffect(() => {
-        setLoop( setInterval(() => { setTime(new Date()) }, 1000) )
+        setTimeout( setInterval(() => { setTime(new Date()) }, 1000) )
     }, [])
 
     useEffect(() => {
         // componentWillUnmount
         return () => {
-            if (loop !== undefined) {
-                clearInterval(loop);
+            if (timeout !== undefined) {
+                clearInterval(timeout);
             }
         }
-      }, [loop]);
+      }, [timeout]);
 
     return (<div css={[border, extraLargeText, css({textAlign:'center'})]}>
         {formatTime(time)}
