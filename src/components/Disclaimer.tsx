@@ -2,6 +2,6 @@ import React from 'react';
 
 export const Disclaimer = () => (
     <div>
-        Morning walk before 12:30pm, Night walk before 6:30pm
+        Morning chores before 12:30pm, night chores before 6:30pm
     </div>
 );

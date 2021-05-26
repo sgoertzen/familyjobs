@@ -10,5 +10,5 @@ storiesOf('Day Display', module)
         return <DayDisplay day={new Date('2050-12-31')}/>
     })
     .add('Leap Day', () => {
-        return <DayDisplay day={new Date('2004-02-29')}/>
+        return <DayDisplay day={new Date('2020-02-29')}/>
     })

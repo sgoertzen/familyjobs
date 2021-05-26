@@ -1,1 +1,2 @@
 Update data.json to use frequency, length, etc.
+Replace favicon

@@ -1,22 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
+import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
 import { border, extraLargeText } from '../styles/style'
-
-export const formatTime = (time:Date) => {
-    let hours = time.getHours();
-    let minutes = time.getMinutes();
-    let seconds = time.getSeconds();
-    let ampm = "am";
-    if (hours > 11) {
-        ampm = "pm"
-    }
-    if (hours > 12) {
-        hours = hours - 12
-    }
-    return hours + ":" + (minutes<10 ? "0": "") + minutes + ":" + (seconds<10 ? "0": "")  + seconds + " " + ampm;
-}
 
 export const Clock = () => {
     const [time, setTime] = useState<Date>(new Date());
@@ -36,6 +23,6 @@ export const Clock = () => {
       }, [timeout]);
 
     return (<div css={[border, extraLargeText, css({textAlign:'center'})]}>
-        {formatTime(time)}
+        {format(time, "h:mm:ss aaa")}
       </div>)
 }
