@@ -97,15 +97,9 @@ export const getMillisecondsUntilEgg = (now:Date) => {
 }
 
 export const EasterEgg = () => {
-
-
     let [showing, setShowing] = useState(false)
     let [timer, setTimer] = useState<NodeJS.Timeout>()
     
-    useEffect(() => {
-        setTimer( setTimeout(showEgg, getMillisecondsUntilEgg(new Date())) )
-    }, [])
-
     useEffect(() => {
         // componentWillUnmount
         return () => {
@@ -117,17 +111,24 @@ export const EasterEgg = () => {
 
     const showEgg = () => {
         setShowing(true)
-        // Start time for 20 seconds.  This value needs to match the sliding image 
-        setTimer( setTimeout(hideEgg, SECONDS_TO_SHOW*1000))
+        setTimer(undefined)
     }
 
     const hideEgg = () => {
         setShowing(false)
-        setTimer( setTimeout(showEgg, getMillisecondsUntilEgg(new Date())) )
+        setTimer(undefined)
+    }
+
+    // Ensure we always have a timer running
+    if (timer === undefined){
+        if (showing) {
+            setTimer( setTimeout(hideEgg, SECONDS_TO_SHOW*1000))
+        } else {
+            setTimer( setTimeout(showEgg, getMillisecondsUntilEgg(new Date())) )
+        }
     }
     
     let selectedImage = images[getRandomInt(images.length)]
-
     return (
         showing ? <SlidingImage {...selectedImage} /> : null
     )
