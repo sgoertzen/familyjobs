@@ -3,8 +3,10 @@
 import { jsx, css, keyframes } from '@emotion/react'
 
 export enum SlideFrom {
-    FromRight, FromBottom, FromTop
+    FromRight, FromBottom, FromTop, FromLeft
 }
+
+export const SECONDS_TO_SHOW = 20
 
 type SlidingImageProps = {
     src: string,
@@ -15,6 +17,13 @@ type SlidingImageProps = {
 
 export const SlidingImage = (props: SlidingImageProps) => {
     
+    const framesFromLeft = keyframes({ 
+        from: { top: 'calc(100% - ' + props.height + 'px)', left: '-' + props.width + 'px' },
+        '15%': { left: '0%' },
+        '85%': { left: '0%' },
+        to: { top: 'calc(100% - ' + props.height + 'px)', left: '-' + props.width + 'px' }
+    })
+
     const framesFromRight = keyframes({ 
         from: { top: 'calc(100% - ' + props.height + 'px)', left: '100%' },
         '15%': { left: 'calc(100% - ' + props.width +  'px)' },
@@ -45,12 +54,14 @@ export const SlidingImage = (props: SlidingImageProps) => {
                 return framesFromBottom
             case SlideFrom.FromRight:
                 return framesFromRight
+            case SlideFrom.FromLeft:
+                return framesFromLeft
         }
     }
 
     const imageStyleBetter = css({
         animationName: getFrames(props.from),
-        animationDuration: '4s',
+        animationDuration: SECONDS_TO_SHOW + 's',
         animationTimingFunction: 'ease-in-out',
         animationDirection: 'normal',
         animationIterationCount: '1',

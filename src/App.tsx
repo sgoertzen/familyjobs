@@ -4,6 +4,7 @@ import { ChoreList } from './components/ChoreList';
 import { Clock } from './components/Clock';
 import { Disclaimer } from './components/Disclaimer';
 import { differenceInMilliseconds, startOfTomorrow } from 'date-fns'
+import { EasterEgg } from './components/EasterEgg';
 
 export const App = () => {
 
@@ -11,7 +12,6 @@ export const App = () => {
 
   useEffect(() => {
         let diff = differenceInMilliseconds(startOfTomorrow(), displayDate)
-        console.log("Time till tomorrow: " + diff)
         setTimeout(() => { setDisplayDate(new Date()) }, diff)
     }, [displayDate]
   )
@@ -21,6 +21,7 @@ export const App = () => {
       <ChoreList displayDay={displayDate}/>
       <Clock/>
       <Disclaimer/>
+      <EasterEgg/>
     </div>
   )
 }
