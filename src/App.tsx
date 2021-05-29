@@ -9,6 +9,7 @@ import { differenceInMilliseconds, getHours, startOfTomorrow } from 'date-fns'
 import { EasterEgg } from './components/EasterEgg'
 import { BirthdayConfetti } from './components/BirthdayConfetti'
 import { css } from '@emotion/react'
+import {NightlyRefresh} from './components/NightlyRefresh'
 
 const lightTheme = css({
   textAlign: 'center'
@@ -43,6 +44,7 @@ export const App = () => {
       <Disclaimer/>
       <EasterEgg/>
       <BirthdayConfetti/>
+      <NightlyRefresh/>
     </div>
   )
 }
