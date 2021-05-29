@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { differenceInMilliseconds, setMinutes, setHours, isAfter, addDays, setSeconds } from 'date-fns'
 import { SECONDS_TO_SHOW, SlideFrom, SlidingImage } from './SlidingImage'
 
 type eggImage = {
@@ -82,18 +81,8 @@ const getRandomInt = (max:number):number => {
     return Math.floor(Math.random() * max);
 }
 
-export const getMillisecondsUntilEgg = (now:Date) => {
-    let firstDeadline = setSeconds(setMinutes(setHours(new Date(), 12), 30), 0)
-    let secondDeadline = setSeconds(setMinutes(setHours(new Date(), 18), 30), 0)
-
-    if (isAfter(now, secondDeadline)){
-        // Both of our deadlines have passed, use tomorrow first
-        return differenceInMilliseconds(addDays(firstDeadline, 1), now)
-    }
-    if (isAfter(now, firstDeadline)) {
-        return differenceInMilliseconds(secondDeadline, now)
-    }
-    return differenceInMilliseconds(firstDeadline, now)
+export const getMillisecondsUntilEgg = () => {
+    return (getRandomInt(3600) + (3600)) * 1000
 }
 
 export const EasterEgg = () => {
@@ -124,7 +113,7 @@ export const EasterEgg = () => {
         if (showing) {
             setTimer( setTimeout(hideEgg, SECONDS_TO_SHOW*1000))
         } else {
-            setTimer( setTimeout(showEgg, getMillisecondsUntilEgg(new Date())) )
+            setTimer( setTimeout(showEgg, getMillisecondsUntilEgg()) )
         }
     }
     
