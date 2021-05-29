@@ -10,12 +10,11 @@ import { EasterEgg } from './components/EasterEgg'
 import { BirthdayConfetti } from './components/BirthdayConfetti'
 import { css } from '@emotion/react'
 
-export const lightTheme = css({
-  color: 'white',
+const lightTheme = css({
   textAlign: 'center'
 })
 
-export const darkTheme = css({
+const darkTheme = css({
   color: '#666666',
   backgroundColor: 'black',
   textAlign: 'center',
