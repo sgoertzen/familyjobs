@@ -35,7 +35,7 @@ export const App = () => {
   )
 
   let currentHour = getHours(new Date())
-  let nightMode = (currentHour < 7 || currentHour > 11)
+  let nightMode = (currentHour < 7 || currentHour > 23)
 
   return (
     <div className="App" css={nightMode ? darkTheme : lightTheme}>
