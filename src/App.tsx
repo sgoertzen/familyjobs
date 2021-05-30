@@ -1,11 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react'
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { ChoreList } from './components/ChoreList'
 import { Clock } from './components/Clock'
 import { Disclaimer } from './components/Disclaimer'
-import { differenceInMilliseconds, getHours, startOfTomorrow } from 'date-fns'
+import { differenceInMilliseconds, getHours, isPast, startOfTomorrow, set } from 'date-fns'
 import { EasterEgg } from './components/EasterEgg'
 import { BirthdayConfetti } from './components/BirthdayConfetti'
 import { css } from '@emotion/react'
@@ -26,16 +26,20 @@ const darkTheme = css({
 
 export const App = () => {
 
+  const inNightTime = useCallback(() => {
+    let currentHour = getHours(new Date())
+    return (currentHour < 7 || currentHour > 23)
+  }, [])
   const [displayDate, setDisplayDate] = useState(new Date())
+  const [nightMode, setNightMode] = useState(inNightTime())
 
   useEffect(() => {
-        let diff = differenceInMilliseconds(startOfTomorrow(), displayDate)
-        setTimeout(() => { setDisplayDate(new Date()) }, diff)
-    }, [displayDate]
+      let todayAt7am = set(new Date(), {hours: 7, minutes: 0, seconds: 0})
+      let nextDate = isPast(todayAt7am) ? startOfTomorrow() : todayAt7am
+      let diff = differenceInMilliseconds(nextDate, displayDate)
+      setTimeout(() => { setDisplayDate(new Date()); setNightMode(inNightTime) }, diff)
+    }, [displayDate, inNightTime]
   )
-
-  let currentHour = getHours(new Date())
-  let nightMode = (currentHour < 7 || currentHour > 23)
 
   return (
     <div className="App" css={nightMode ? darkTheme : lightTheme}>
