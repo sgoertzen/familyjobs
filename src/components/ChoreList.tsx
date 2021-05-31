@@ -9,6 +9,7 @@ import { add } from 'date-fns'
 import { ChevronButton, ChevronDirection } from './ChevronButton'
 import { border } from '../styles/style'
 import { TimedButton } from './TimedButton'
+import { BirthdayConfetti } from './BirthdayConfetti'
 
 type ChoreListProps = {
   displayDay: Date
@@ -60,6 +61,7 @@ export const ChoreList = (props:ChoreListProps) => {
         {returnButton}
       </div>
       <ChevronButton onClick={increment} direction={ChevronDirection.Right}/>
+      <BirthdayConfetti displayDay={choreDay.date}/>
     </div>
   );
 };

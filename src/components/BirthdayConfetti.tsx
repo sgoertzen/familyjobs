@@ -9,8 +9,13 @@ export const isBirthday = (day:Date) => {
         (getDate(day) === 13 && getMonth(day) === 8))
 }
 
-export const BirthdayConfetti = () => {
+type BirthdayConfettiProps = {
+    displayDay: Date
+  }
+
+export const BirthdayConfetti = (props: BirthdayConfettiProps) => {
+    console.log("Is birthday: " + isBirthday(props.displayDay))
     return (
-        isBirthday(new Date()) ? <Confetti/> : null
+        isBirthday(props.displayDay) ? <Confetti/> : null
     )
 }

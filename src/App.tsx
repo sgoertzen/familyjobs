@@ -7,7 +7,6 @@ import { Clock } from './components/Clock'
 import { Disclaimer } from './components/Disclaimer'
 import { differenceInMilliseconds, getHours, isPast, startOfTomorrow, set } from 'date-fns'
 import { EasterEgg } from './components/EasterEgg'
-import { BirthdayConfetti } from './components/BirthdayConfetti'
 import { css } from '@emotion/react'
 import {NightlyRefresh} from './components/NightlyRefresh'
 
@@ -47,7 +46,6 @@ export const App = () => {
       <Clock/>
       <Disclaimer/>
       <EasterEgg/>
-      <BirthdayConfetti/>
       <NightlyRefresh/>
     </div>
   )
