@@ -4,8 +4,7 @@
 
 Family Jobs is a website used by my family to track chores.  
 
-![Family Jobs Screenshot](https://github.com/sgoertzen/familyjobs/src/images/family_jobs_screenshot.png)
-
+![Family Jobs Screenshot](https://github.com/sgoertzen/familyjobs/raw/master/src/images/family_jobs_screenshot.png)
 
 ## Available Scripts
 
