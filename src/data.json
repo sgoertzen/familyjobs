@@ -1,82 +1,64 @@
 {
-    "days":[
+    "chores": [
         {
-            "dayOfWeek": 0,
-            "name": "Sunday",
-            "dishesUnload": "Kyla",
-            "dishesLoad": "Dad",
-            "walkMorning": "Kyla",
-            "walkEvening": "Bryce"
+            "name":"Dishes",
+            "scheduletype":"daily",
+            "dailySchedule":{
+                "Sunday":"Kyla",
+                "Monday":"Mom",
+                "Tuesday":"Bryce",
+                "Wednesday":"Kyla",
+                "Thursday":"Dad",
+                "Friday":"Bryce",
+                "Saturday":"Mom"
+            }
         },
         {
-            "dayOfWeek": 1,
-            "name": "Monday",
-            "dishesUnload": "Mom",
-            "dishesLoad": "Kyla",
-            "walkMorning": "Dad",
-            "walkEvening": "Bryce"
+            "name":"Morning Walk",
+            "scheduletype":"daily",
+            "dailySchedule":{
+                "Sunday":"Kyla",
+                "Monday":"Dad",
+                "Tuesday":"Kyla",
+                "Wednesday":"Kyla",
+                "Thursday":"Kyla",
+                "Friday":"Dad",
+                "Saturday":"Kyla"
+            }
         },
         {
-            "dayOfWeek": 2,
-            "name": "Tuesday",
-            "dishesUnload": "Dad",
-            "dishesLoad": "Bryce",
-            "walkMorning": "Kyla",
-            "walkEvening": "Dad"
+            "name":"Evening Walk",
+            "scheduletype":"daily",
+            "dailySchedule":{
+                "Sunday":"Bryce",
+                "Monday":"Bryce",
+                "Tuesday":"Dad",
+                "Wednesday":"Bryce",
+                "Thursday":"Bryce",
+                "Friday":"Bryce",
+                "Saturday":"Dad"
+            }
         },
         {
-            "dayOfWeek": 3,
-            "name": "Wednesday",
-            "dishesUnload": "Kyla",
-            "dishesLoad": "Mom",
-            "walkMorning": "Kyla",
-            "walkEvening": "Bryce"
+            "name":"Cook Dinner",
+            "scheduletype":"daily",
+            "dailySchedule":{
+                "Sunday": "",
+                "Monday":"Dad",
+                "Tuesday":"Mom",
+                "Wednesday":"Bryce",
+                "Thursday":"Kyla",
+                "Friday":"",
+                "Saturday":""
+            }
         },
         {
-            "dayOfWeek": 4,
-            "name": "Thursday",
-            "dishesUnload": "Dad",
-            "dishesLoad": "Bryce",
-            "walkMorning": "Kyla",
-            "walkEvening": "Bryce"
-        },
-        {
-            "dayOfWeek": 5,
-            "name": "Friday",
-            "dishesUnload": "Bryce",
-            "dishesLoad": "Kyla",
-            "walkMorning": "Dad",
-            "walkEvening": "Bryce"
-        },
-        {
-            "dayOfWeek": 6,
-            "name": "Saturday",
-            "dishesUnload": "Mom",
-            "dishesLoad": "Dad",
-            "walkMorning": "Kyla",
-            "walkEvening": "Dad"
-        }
-    ],
-    "weeks":[
-        {
-            "week":0,
-            "daysOfWeek":[6],
-            "sortLaundry":"Dad"
-        },
-        {
-            "week":1,
-            "daysOfWeek":[6],
-            "sortLaundry":"Kyla"
-        },
-        {
-            "week":2,
-            "daysOfWeek":[6],
-            "sortLaundry":"Mom"
-        },
-        {
-            "week":3,
-            "daysOfWeek":[6],
-            "sortLaundry":"Bryce"
+            "name":"Sort Laundry",
+            "scheduletype":"weekly",
+            "weeklySchedule":{
+                "daysOfWeek": [6],
+                "weekAssignee":["Kyla", "Mom", "Bryce", "Dad"]
+            }
         }
     ]
 }

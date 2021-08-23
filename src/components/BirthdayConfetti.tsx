@@ -14,7 +14,6 @@ type BirthdayConfettiProps = {
   }
 
 export const BirthdayConfetti = (props: BirthdayConfettiProps) => {
-    console.log("Is birthday: " + isBirthday(props.displayDay))
     return (
         isBirthday(props.displayDay) ? <Confetti/> : null
     )
