@@ -4,10 +4,10 @@
             "name":"Dishes",
             "scheduletype":"daily",
             "dailySchedule":{
-                "Sunday":"Kyla",
+                "Sunday":"Fae",
                 "Monday":"Mom",
                 "Tuesday":"Bryce",
-                "Wednesday":"Kyla",
+                "Wednesday":"Fae",
                 "Thursday":"Dad",
                 "Friday":"Bryce",
                 "Saturday":"Mom"
@@ -17,13 +17,13 @@
             "name":"Morning Walk",
             "scheduletype":"daily",
             "dailySchedule":{
-                "Sunday":"Kyla",
+                "Sunday":"Fae",
                 "Monday":"Dad",
-                "Tuesday":"Kyla",
-                "Wednesday":"Kyla",
-                "Thursday":"Kyla",
+                "Tuesday":"Dad",
+                "Wednesday":"Dad",
+                "Thursday":"Dad",
                 "Friday":"Dad",
-                "Saturday":"Kyla"
+                "Saturday":"Bryce"
             }
         },
         {
@@ -32,11 +32,11 @@
             "dailySchedule":{
                 "Sunday":"Bryce",
                 "Monday":"Bryce",
-                "Tuesday":"Dad",
+                "Tuesday":"Fae",
                 "Wednesday":"Bryce",
-                "Thursday":"Bryce",
+                "Thursday":"Fae",
                 "Friday":"Bryce",
-                "Saturday":"Dad"
+                "Saturday":"Fae"
             }
         },
         {
@@ -47,7 +47,7 @@
                 "Monday":"Dad",
                 "Tuesday":"Mom",
                 "Wednesday":"Bryce",
-                "Thursday":"Kyla",
+                "Thursday":"Fae",
                 "Friday":"",
                 "Saturday":""
             }
@@ -57,7 +57,7 @@
             "scheduletype":"weekly",
             "weeklySchedule":{
                 "daysOfWeek": [6],
-                "weekAssignee":["Kyla", "Mom", "Bryce", "Dad"]
+                "weekAssignee":["Fae", "Mom", "Bryce", "Dad"]
             }
         }
     ]
