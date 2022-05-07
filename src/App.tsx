@@ -9,6 +9,7 @@ import { differenceInMilliseconds, getHours, isPast, startOfTomorrow, set } from
 import { EasterEgg } from './components/EasterEgg'
 import { css } from '@emotion/react'
 import {NightlyRefresh} from './components/NightlyRefresh'
+import { RemainingDays } from './components/RemainingDays'
 
 const lightTheme = css({
   textAlign: 'center'
@@ -44,6 +45,7 @@ export const App = () => {
     <div className="App" css={nightMode ? darkTheme : lightTheme}>
       <ChoreList displayDay={displayDate}/>
       <Clock/>
+      <RemainingDays target={new Date("5/27/2022")}/>
       <Disclaimer/>
       <EasterEgg/>
       <NightlyRefresh/>
