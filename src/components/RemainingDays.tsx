@@ -2,39 +2,27 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
 import { differenceInBusinessDays } from 'date-fns';
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { border, largeText } from '../styles/style'
 
 type RemainingDaysProps = {
     target: Date
 }
 
-export const RemainingDays = (props: RemainingDaysProps) => {
-    const [day, setDay] = useState<Date>(props.target);
-    const [timeout, setTimeout] = useState<NodeJS.Timeout>();
-    
-    useEffect(() => {
-        setTimeout( setInterval(() => { setDay(new Date()) }, 60000) )
-    }, [])
+export const getRemainingMessage = (days:number) => {
+    if (days > 0) {
+        return `Only ${days} days of school left!`
+    } else {
+        return 'School is out for summer!'
+    }
+}
 
-    useEffect(() => {
-        // componentWillUnmount
-        return () => {
-            if (timeout !== undefined) {
-                clearInterval(timeout);
-            }
-        }
-      }, [timeout]);
+export const RemainingDays = (props: RemainingDaysProps) => {
+    const [day] = useState<Date>(props.target);
 
     const days = differenceInBusinessDays(day, new Date());
-    let message = ""
-    if (days > 0) {
-        message = `Only ${days} days of school left!`
-    } else {
-        message = 'School is out for summer!'
-    }
 
     return (<div css={[border, largeText, css({textAlign:'center'})]}>
-        {message}
+        {getRemainingMessage(days)}
       </div>)
 }
