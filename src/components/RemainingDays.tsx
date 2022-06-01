@@ -11,9 +11,9 @@ type RemainingDaysProps = {
 
 export const getRemainingMessage = (days:number) => {
     if (days > 0) {
-        return `Only ${days} days of school left!`
+        return `Only ${days} days until we have a house`
     } else {
-        return 'School is out for summer!'
+        return 'We are in our new house!'
     }
 }
 

@@ -17,6 +17,19 @@
             "name":"Morning Walk",
             "scheduletype":"daily",
             "dailySchedule":{
+                "Sunday":"Bryce",
+                "Monday":"Bryce",
+                "Tuesday":"Fae",
+                "Wednesday":"Bryce",
+                "Thursday":"Fae",
+                "Friday":"Fae",
+                "Saturday":"Fae"
+            }
+        },
+        {
+            "name":"Evening Walk",
+            "scheduletype":"daily",
+            "dailySchedule":{
                 "Sunday":"Fae",
                 "Monday":"Dad",
                 "Tuesday":"Dad",
@@ -24,19 +37,6 @@
                 "Thursday":"Dad",
                 "Friday":"Dad",
                 "Saturday":"Bryce"
-            }
-        },
-        {
-            "name":"Evening Walk",
-            "scheduletype":"daily",
-            "dailySchedule":{
-                "Sunday":"Bryce",
-                "Monday":"Bryce",
-                "Tuesday":"Fae",
-                "Wednesday":"Bryce",
-                "Thursday":"Fae",
-                "Friday":"Bryce",
-                "Saturday":"Fae"
             }
         },
         {

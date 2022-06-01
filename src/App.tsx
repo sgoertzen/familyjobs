@@ -44,7 +44,7 @@ export const App = () => {
   return (
     <div className="App" css={nightMode ? darkTheme : lightTheme}>
       <ChoreList displayDay={displayDate}/>
-      <RemainingDays target={new Date("5/27/2022")}/>
+      <RemainingDays target={new Date("6/24/2022")}/>
       <Clock/>
       <Disclaimer/>
       <EasterEgg/>
