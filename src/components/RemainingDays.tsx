@@ -1,28 +1,30 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from '@emotion/react'
-import { differenceInBusinessDays } from 'date-fns';
+import { differenceInDays } from 'date-fns';
 import { useState } from 'react';
 import { border, largeText } from '../styles/style'
 
 type RemainingDaysProps = {
     target: Date
+    countdownMessage: string
+    expiredMessage: string
 }
 
-export const getRemainingMessage = (days:number) => {
+export const getRemainingMessage = (days:number, countdownMessage:string, expiredMessage:string) => {
     if (days > 0) {
-        return `Only ${days} days until we have a house`
+        return countdownMessage.replace("%DAYS%", days.toString());
     } else {
-        return 'We are in our new house!'
+        return expiredMessage
     }
 }
 
 export const RemainingDays = (props: RemainingDaysProps) => {
     const [day] = useState<Date>(props.target);
 
-    const days = differenceInBusinessDays(day, new Date());
+    const days = differenceInDays(day, new Date());
 
     return (<div css={[border, largeText, css({textAlign:'center'})]}>
-        {getRemainingMessage(days)}
+        {getRemainingMessage(days, props.countdownMessage, props.expiredMessage)}
       </div>)
 }
