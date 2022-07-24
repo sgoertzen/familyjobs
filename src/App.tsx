@@ -2,17 +2,18 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/react'
 import React, { useCallback, useEffect, useState } from 'react'
-import { ChoreList } from './components/ChoreList'
-import { Clock } from './components/Clock'
-import { Disclaimer } from './components/Disclaimer'
+import { HAChoreList } from './components/HAChoreList'
 import { differenceInMilliseconds, getHours, isPast, startOfTomorrow, set } from 'date-fns'
-import { EasterEgg } from './components/EasterEgg'
 import { css } from '@emotion/react'
 import {NightlyRefresh} from './components/NightlyRefresh'
-import { RemainingDays } from './components/RemainingDays'
 
 const lightTheme = css({
-  textAlign: 'center'
+  color: '#666666',
+  backgroundColor: 'black',
+  textAlign: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  minHeight: '100vh'
 })
 
 const darkTheme = css({
@@ -43,11 +44,7 @@ export const App = () => {
 
   return (
     <div className="App" css={nightMode ? darkTheme : lightTheme}>
-      <ChoreList displayDay={displayDate}/>
-      <RemainingDays target={new Date("2022-06-30T09:00:00")} countdownMessage="🏠⬅🚚: %DAYS% days" expiredMessage='🎉🎉 🏠 🎉🎉'/>
-      <Clock/>
-      <Disclaimer/>
-      <EasterEgg/>
+      <HAChoreList displayDay={displayDate}/>
       <NightlyRefresh/>
     </div>
   )

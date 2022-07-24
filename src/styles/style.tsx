@@ -1,7 +1,7 @@
 
 import { css } from '@emotion/react'
 
-export const COLOR_MAIN = '#3d5a80'
+export const COLOR_MAIN = '#9EACBF'
 export const COLOR_SECONDARY = '#6eb4d1'
 export const COLOR_HIGHLIGHT = '#17301C'
 export const COLOR_ACCENT = '#989572'
