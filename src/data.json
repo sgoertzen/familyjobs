@@ -31,10 +31,10 @@
             "scheduletype":"daily",
             "dailySchedule":{
                 "Sunday":"Fae",
-                "Monday":"Dad",
-                "Tuesday":"Dad",
-                "Wednesday":"Dad",
-                "Thursday":"Dad",
+                "Monday":"Mom",
+                "Tuesday":"Mom",
+                "Wednesday":"Mom",
+                "Thursday":"Mom",
                 "Friday":"Dad",
                 "Saturday":"Bryce"
             }
