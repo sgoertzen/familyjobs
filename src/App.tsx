@@ -1,7 +1,6 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/react'
-import React, { useCallback, useEffect, useState } from 'react'
 import { StandAlonePage } from './components/StandAlonePage'
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
