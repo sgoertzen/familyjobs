@@ -44,7 +44,6 @@ export const HAPage = () => {
 
   return (
     <div className="HAPage" css={nightMode ? darkTheme : lightTheme}>
-      TEST
       <HAChoreList displayDay={displayDate}/>
       <NightlyRefresh/>
     </div>
