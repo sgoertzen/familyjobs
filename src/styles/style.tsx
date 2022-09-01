@@ -13,7 +13,7 @@ export const border = css({
     border: '4px solid ' + COLOR_ACCENT,
     borderRadius: '15px',
     padding: '10px',
-    margin: '20px'
+    margin: '10px'
 })
 
 export const text = css({
@@ -25,14 +25,14 @@ export const accentText = css({
 })
 
 export const smallText = [text, css({
-    fontSize: '16px'
+    fontSize: '1em'
 })]
 
 export const largeText = [text, css({
-    fontSize: '36px'
+    fontSize: '2em'
 })]
 export const extraLargeText = [text, css({
-    fontSize: '80px'
+    fontSize: '4em'
 })]
 
 export const smallButton = css({

@@ -4,7 +4,7 @@ import { jsx, css } from '@emotion/react'
 import React, { useState } from "react"
 import { DailyChoreItem } from "./DailyChoreItem"
 import { ChoreDay, getChoreList} from "../util/DataStore"
-import { DayDisplay } from "./DayDisplay"
+import { HADayDisplay } from "./HADayDisplay"
 import { border } from '../styles/style'
 
 type HAChoreListProps = {
@@ -31,8 +31,8 @@ export const HAChoreList = (props:HAChoreListProps) => {
   return (
     <div css={[border, rowFlex]}>
       <div css={colFlex}>
-        <DayDisplay day={choreDay.date}/>
-        {choreDay.chores.map((cd) => 
+        <HADayDisplay day={choreDay.date}/>
+        {choreDay.chores.filter(cd => cd.choreName!='Morning Walk').map((cd) => 
           <DailyChoreItem key={cd.choreName} name={cd.choreName} assignee={cd.personName}/>
         )}
       </div>
