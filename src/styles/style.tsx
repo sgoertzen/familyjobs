@@ -29,7 +29,7 @@ export const smallText = [text, css({
 })]
 
 export const largeText = [text, css({
-    fontSize: '2em'
+    fontSize: '1.5em'
 })]
 export const extraLargeText = [text, css({
     fontSize: '4em'
