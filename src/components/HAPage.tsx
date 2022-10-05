@@ -1,10 +1,8 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/react'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 import React, { useCallback, useEffect, useState } from 'react'
 import { HAChoreList } from './HAChoreList'
 import { differenceInMilliseconds, getHours, isPast, startOfTomorrow, set } from 'date-fns'
-import { css } from '@emotion/react'
 import {NightlyRefresh} from './NightlyRefresh'
 
 const lightTheme = css({

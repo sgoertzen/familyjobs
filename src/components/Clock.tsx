@@ -1,6 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx, css } from '@emotion/react'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
 import { border, extraLargeText } from '../styles/style'

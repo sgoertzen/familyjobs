@@ -1,6 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx, css } from '@emotion/react'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 import { differenceInDays } from 'date-fns';
 import { useState } from 'react';
 import { border, largeText } from '../styles/style'
