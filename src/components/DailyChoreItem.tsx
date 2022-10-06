@@ -1,9 +1,7 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/react'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 import React from 'react';
 import { largeText } from '../styles/style'
-import { css } from '@emotion/react'
 
 type ChoreProps = {
     name: string,

@@ -1,6 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/react'
+/** @jsxImportSource @emotion/react */
 import { LeftChevron, RightChevron } from '../images/Chevrons'
 import { iconButton } from '../styles/style'
 

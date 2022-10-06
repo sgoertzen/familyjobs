@@ -1,13 +1,11 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/react'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 import React, { useCallback, useEffect, useState } from 'react'
 import { ChoreList } from './ChoreList'
 import { Clock } from './Clock'
 import { Disclaimer } from './Disclaimer'
 import { differenceInMilliseconds, getHours, isPast, startOfTomorrow, set } from 'date-fns'
 import { EasterEgg } from './EasterEgg'
-import { css } from '@emotion/react'
 import {NightlyRefresh} from './NightlyRefresh'
 import { RemainingDays } from './RemainingDays'
 
@@ -44,7 +42,7 @@ export const StandAlonePage = () => {
   return (
     <div className="StandAlonePage" css={nightMode ? darkTheme : lightTheme}>
       <ChoreList displayDay={displayDate}/>
-      <RemainingDays target={new Date("2022-06-30T09:00:00")} countdownMessage="🏠⬅🚚: %DAYS% days" expiredMessage='🎉🎉 🏠 🎉🎉'/>
+      <RemainingDays target={new Date("2022-06-30T09:00:00")} countdownMessage="🏠⬅🚚: %DAYS% days" expiredMessage='I love you family!  Have a great day and see you soon!'/>
       <Clock/>
       <Disclaimer/>
       <EasterEgg/>
