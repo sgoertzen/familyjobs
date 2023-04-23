@@ -1,6 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx, css } from '@emotion/react'
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
 import React, { useState } from "react"
 import { DailyChoreItem } from "./DailyChoreItem"
 import { ChoreDay, getChoreList} from "../util/DataStore"

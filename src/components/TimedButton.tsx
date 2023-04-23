@@ -1,6 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/react'
+/** @jsxImportSource @emotion/react */
 import React, { useEffect, useState } from 'react';
 import { smallButton, smallText, accentText } from '../styles/style'
 

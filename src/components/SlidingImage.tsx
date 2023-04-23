@@ -1,6 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx, css, keyframes } from '@emotion/react'
+/** @jsxImportSource @emotion/react */
+import { css, keyframes } from '@emotion/react'
 
 export enum SlideFrom {
     FromRight, FromBottom, FromTop, FromLeft

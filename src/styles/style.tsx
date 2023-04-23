@@ -32,7 +32,7 @@ export const largeText = [text, css({
     fontSize: '2em'
 })]
 export const extraLargeText = [text, css({
-    fontSize: '4em'
+    fontSize: '6em'
 })]
 
 export const smallButton = css({
