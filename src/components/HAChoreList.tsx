@@ -32,7 +32,7 @@ export const HAChoreList = (props:HAChoreListProps) => {
     <div css={[border, rowFlex]}>
       <div css={colFlex}>
         <HADayDisplay day={choreDay.date}/>
-        {choreDay.chores.filter(cd => cd.choreName!=='Morning Walk').map((cd) => 
+        {choreDay.chores.map((cd) => 
           <DailyChoreItem key={cd.choreName} name={cd.choreName} assignee={cd.personName}/>
         )}
       </div>
