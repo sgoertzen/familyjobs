@@ -4,26 +4,26 @@
             "name":"Dishes",
             "scheduletype":"daily",
             "dailySchedule":{
-                "Sunday":"Fae",
-                "Monday":"Mom",
+                "Sunday":"Mom",
+                "Monday":"Jax",
                 "Tuesday":"Bryce",
-                "Wednesday":"Fae",
-                "Thursday":"Dad",
+                "Wednesday":"Mom",
+                "Thursday":"Jax",
                 "Friday":"Bryce",
-                "Saturday":"Mom"
+                "Saturday":"Dad"
             }
         },
         {
             "name":"Morning Walk",
             "scheduletype":"daily",
             "dailySchedule":{
-                "Sunday":"Fae",
-                "Monday":"Mom",
-                "Tuesday":"Mom",
+                "Sunday":"Mom",
+                "Monday":"Bryce",
+                "Tuesday":"Jax",
                 "Wednesday":"Mom",
-                "Thursday":"Mom",
-                "Friday":"Dad",
-                "Saturday":"Bryce"
+                "Thursday":"Bryce",
+                "Friday":"Jax",
+                "Saturday":"Dad"
             }
         },
         {
@@ -31,33 +31,84 @@
             "scheduletype":"daily",
             "dailySchedule":{
                 "Sunday":"Bryce",
-                "Monday":"Bryce",
-                "Tuesday":"Fae",
-                "Wednesday":"Bryce",
-                "Thursday":"Fae",
-                "Friday":"Fae",
-                "Saturday":"Fae"
-            }
-        },
-        {
-            "name":"Cook Dinner",
-            "scheduletype":"daily",
-            "dailySchedule":{
-                "Sunday": "",
-                "Monday":"Dad",
+                "Monday":"Jax",
                 "Tuesday":"Mom",
-                "Wednesday":"Fae",
-                "Thursday":"Bryce",
-                "Friday":"",
-                "Saturday":""
+                "Wednesday":"Bryce",
+                "Thursday":"Jax",
+                "Friday":"Dad",
+                "Saturday":"Mom"
             }
         },
         {
-            "name":"Sort Laundry",
+            "name":"Clean Parents Bathroom",
             "scheduletype":"weekly",
             "weeklySchedule":{
                 "daysOfWeek": [6],
-                "weekAssignee":["Fae", "Mom", "Bryce", "Dad"]
+                "weekAssignee":["", "", "Mom", ""]
+            }
+        },
+        {
+            "name":"Clean 1st Floor Bathroom",
+            "scheduletype":"weekly",
+            "weeklySchedule":{
+                "daysOfWeek": [6],
+                "weekAssignee":["", "", "Bryce", ""]
+            }
+        },
+        {
+            "name":"Clean Upstairs Bathroom",
+            "scheduletype":"weekly",
+            "weeklySchedule":{
+                "daysOfWeek": [6],
+                "weekAssignee":["", "", "Jax", ""]
+            }
+        },
+        {
+            "name":"Vaccum 1st Floor",
+            "scheduletype":"weekly",
+            "weeklySchedule":{
+                "daysOfWeek": [6],
+                "weekAssignee":["", "", "Dad", ""]
+            }
+        },
+        {
+            "name":"Vaccum 2nd Floor",
+            "scheduletype":"weekly",
+            "weeklySchedule":{
+                "daysOfWeek": [6],
+                "weekAssignee":["Jax", "", "", ""]
+            }
+        },
+        {
+            "name":"Vaccum Basement",
+            "scheduletype":"weekly",
+            "weeklySchedule":{
+                "daysOfWeek": [6],
+                "weekAssignee":["Bryce", "", "", ""]
+            }
+        },
+        {
+            "name":"Sweep 1st floor",
+            "scheduletype":"weekly",
+            "weeklySchedule":{
+                "daysOfWeek": [6],
+                "weekAssignee":["Mom", "", "", ""]
+            }
+        },
+        {
+            "name":"Mow Lawn",
+            "scheduletype":"weekly",
+            "weeklySchedule":{
+                "daysOfWeek": [6],
+                "weekAssignee":["", "Jax", "", "Bryce"]
+            }
+        },
+        {
+            "name":"Compost Out and Rotate",
+            "scheduletype":"weekly",
+            "weeklySchedule":{
+                "daysOfWeek": [0],
+                "weekAssignee":["Mom", "Bryce", "Jax", "Dad"]
             }
         }
     ]
