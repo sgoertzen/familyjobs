@@ -18,11 +18,11 @@
             "scheduletype":"daily",
             "dailySchedule":{
                 "Sunday":"Mom",
-                "Monday":"Bryce",
-                "Tuesday":"Jax",
+                "Monday":"Mom",
+                "Tuesday":"Mom",
                 "Wednesday":"Mom",
-                "Thursday":"Bryce",
-                "Friday":"Jax",
+                "Thursday":"Mom",
+                "Friday":"Mom",
                 "Saturday":"Dad"
             }
         },
@@ -30,12 +30,12 @@
             "name":"Evening Walk",
             "scheduletype":"daily",
             "dailySchedule":{
-                "Sunday":"Bryce",
-                "Monday":"Jax",
-                "Tuesday":"Mom",
+                "Sunday":"Jax",
+                "Monday":"Bryce",
+                "Tuesday":"Jax",
                 "Wednesday":"Bryce",
-                "Thursday":"Jax",
-                "Friday":"Dad",
+                "Thursday":"Bryce",
+                "Friday":"Jax",
                 "Saturday":"Mom"
             }
         },
