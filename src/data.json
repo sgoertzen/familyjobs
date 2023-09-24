@@ -17,7 +17,7 @@
             "name":"Morning Walk",
             "scheduletype":"daily",
             "dailySchedule":{
-                "Sunday":"Mom",
+                "Sunday":"Dad",
                 "Monday":"Mom",
                 "Tuesday":"Mom",
                 "Wednesday":"Mom",
@@ -34,8 +34,8 @@
                 "Monday":"Bryce",
                 "Tuesday":"Jax",
                 "Wednesday":"Bryce",
-                "Thursday":"Bryce",
-                "Friday":"Jax",
+                "Thursday":"Jax",
+                "Friday":"Bryce",
                 "Saturday":"Mom"
             }
         },
@@ -101,14 +101,6 @@
             "weeklySchedule":{
                 "daysOfWeek": [6],
                 "weekAssignee":["", "Jax", "", "Bryce"]
-            }
-        },
-        {
-            "name":"Compost Out and Rotate",
-            "scheduletype":"weekly",
-            "weeklySchedule":{
-                "daysOfWeek": [0],
-                "weekAssignee":["Mom", "Bryce", "Jax", "Dad"]
             }
         }
     ]
